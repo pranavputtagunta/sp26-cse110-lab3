@@ -1,0 +1,31 @@
+/* Universal selector */
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --main-bg: #f4f4f4;
+  --accent-color: hsl(200, 50%, 50%);
+}
+
+h2,
+h3 {
+  color: #333333;
+  text-align: center;
+  text-decoration: underline;
+}
+
+/* Class selector, color mix */
+.sub-topic {
+  color: color-mix(in srgb, blue 60%, black);
+}
+
+/* ID selector */
+#attendance {
+  background-color: rgba(200, 200, 255, 0.5);
+}
+
+/* Pseudo class */
+a:hover {
+  color: orange;
+}
