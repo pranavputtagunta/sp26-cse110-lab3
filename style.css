@@ -150,3 +150,66 @@ button:hover {
     position: static;
   }
 }
+
+/* Element selector and box model shorthand */
+section {
+  padding: 20px 15px 20px 15px; /* Shorthand padding */
+  margin: 10px 5px; /* Shorthand margin */
+  border: 2px solid #ccc; /* Shorthand border */
+  border-radius: 8px;
+}
+
+/* Attribute selector and box model longhand */
+input[type="text"] {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 10px;
+  border-style: solid;
+  border-color: navy;
+  border-width: 1px;
+}
+
+/* Combinators */
+/* 1. Descendant: Any 'p' inside '#agenda' */
+#agenda p {
+  font-weight: bold;
+}
+
+/* 2. Child: Only 'li' that are direct children of 'ul' inside '#attendance' */
+#attendance ul > li {
+  color: darkgreen;
+}
+
+/* 3. Adjacent sibling: The first 'p' immediately following an 'h2' */
+h2 + p {
+  font-size: 1.2em;
+}
+
+/* 4. General sibling: Any 'div' that shares a parent with 'p' and comes after it */
+p ~ div {
+  background-color: #eef;
+}
+
+/* New selector: :has() */
+/* Selects any section that contains a form */
+section:has(form) {
+  background-color: #fffae6;
+  border-color: orange;
+}
+
+/* Nested selectors */
+#misc {
+  background-color: #f0f8ff;
+
+  & details {
+    padding: 10px;
+    background-color: white;
+
+    & summary {
+      cursor: pointer;
+      font-weight: bold;
+    }
+  }
+}
